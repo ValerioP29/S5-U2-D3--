@@ -1,0 +1,115 @@
+/* Esempio di reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #f4f4f4;
+}
+
+.button-primary, .button-secondary, .button-tertiary {
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: none;
+  border: none;
+  color: #fff;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.button-primary.button-primary, .button-secondary.button-primary, .button-tertiary.button-primary {
+  background-color: #ff8700;
+}
+.button-primary.button-secondary, .button-secondary.button-secondary, .button-tertiary.button-secondary {
+  background-color: #4caf50;
+}
+.button-primary.button-tertiary, .button-secondary.button-tertiary, .button-tertiary.button-tertiary {
+  background-color: #cc6c00;
+}
+.button-primary:hover, .button-secondary:hover, .button-tertiary:hover {
+  background-color: white;
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out 0s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.spacing-padding-sm {
+  padding: 5px;
+}
+
+.spacing-margin-inline-lg {
+  margin-inline: 15px;
+}
+
+.hero {
+  background: #640fc5 url("path/to/image.jpg") no-repeat center center;
+  background-size: cover;
+  padding: 20px;
+  color: #f4f4f4;
+  animation: heroFadeIn 1s ease-in-out 0s;
+}
+.hero .hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
+.hero .hero-content .hero-text {
+  max-width: 50%;
+}
+.hero .hero-content .hero-image {
+  border-radius: 0;
+  box-shadow: 0 6px rgba(0, 0, 0, 0.2);
+  border: 1px solid #fff;
+}
+.hero .hero-content .hero-buttons {
+  display: flex;
+  gap: 5px;
+}
+.hero .hero-content .hero-buttons .button-primary, .hero .hero-content .hero-buttons .button-secondary, .hero .hero-content .hero-buttons .button-tertiary {
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: none;
+}
+@keyframes heroFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+  gap: 10px;
+}
+.grid > * {
+  flex: 1 1 calc(100% / 4 - 10px);
+}
+.grid .grid-item {
+  background: #fff;
+  border-radius: 0;
+  box-shadow: 0 4px rgba(0, 0, 0, 0.1);
+  border: none;
+}/*# sourceMappingURL=style.css.map */

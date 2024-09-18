@@ -1,0 +1,49 @@
+// _spacing.scss
+
+@import "variables";
+
+@mixin spacing($direction, $size, $type) {
+  @if $direction == 'block' {
+    @if $type == 'padding' {
+      .spacing-padding-#{$size} {
+        padding: map-get($padding-sizes, $size);
+      }
+    }
+    @else if $type == 'margin' {
+      .spacing-margin-#{$size} {
+        margin: map-get($margin-sizes, $size);
+      }
+    }
+  }
+  @else if $direction == 'inline' {
+    @if $type == 'padding' {
+      .spacing-padding-inline-#{$size} {
+        padding-inline: map-get($padding-sizes, $size);
+      }
+    }
+    @else if $type == 'margin' {
+      .spacing-margin-inline-#{$size} {
+        margin-inline: map-get($margin-sizes, $size);
+      }
+    }
+  }
+}
+
+// Mappe delle dimensioni di padding e margin
+$padding-sizes: (
+  sm: $padding-sm,
+  md: $padding-md,
+  lg: $padding-lg,
+  xl: $padding-xl,
+);
+
+$margin-sizes: (
+  sm: $margin-sm,
+  md: $margin-md,
+  lg: $margin-lg,
+  xl: $margin-xl,
+);
+
+// Utilizzo del mixin per generare le classi
+@include spacing('block', 'sm', 'padding');
+@include spacing('inline', 'lg', 'margin');

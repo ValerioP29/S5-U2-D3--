@@ -1,0 +1,8 @@
+@import "variables";
+@import 'mixins';
+
+
+
+.fade-in {
+  @include fade-in-down($duration: 1s, $delay: 0s, $start: -10px, $end: 0, $name: 'fadeIn');
+}

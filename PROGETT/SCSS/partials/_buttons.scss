@@ -1,0 +1,28 @@
+@import 'variables';
+@import 'mixins';
+
+.button-primary, .button-secondary, .button-tertiary {
+  @include floating;
+  border: none;
+  color: #fff;
+  padding: $padding-md;
+  margin: $margin-sm;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &.button-primary {
+    background-color: $button-primary;
+  }
+
+  &.button-secondary {
+    background-color: $button-secondary;
+  }
+
+  &.button-tertiary {
+    background-color: darken($button-primary, 10%);
+  }
+
+  &:hover {
+    background-color: lighten($background-color, 10%);
+  }
+}

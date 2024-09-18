@@ -1,0 +1,52 @@
+@import 'partials/variables';
+@import 'partials/reset';
+@import 'partials/mixins';
+@import 'partials/buttons';
+@import 'partials/animations';
+@import 'partials/spacing';
+
+// Header Hero Section
+.hero {
+  background: $bg-hero url('path/to/image.jpg') no-repeat center center;
+  background-size: cover;
+  padding: $padding-xl;
+  color: $text-color;
+
+  .hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+
+    .hero-text {
+      max-width: 50%;
+    }
+
+    .hero-image {
+      @include floating(0, 0 6px rgba(0, 0, 0, 0.2), 1px solid #fff);
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: $margin-sm;
+
+      .button-primary, .button-secondary, .button-tertiary {
+        @include floating;
+      }
+    }
+  }
+
+  @include fade-in-down($duration: 1s, $delay: 0s, $start: -20px, $end: 0, $name: 'heroFadeIn');
+}
+
+// Griglia
+.grid {
+  @include grid(4);
+  margin-top: $margin-xl;
+  gap: $margin-md;
+
+  .grid-item {
+    background: #fff;
+    @include floating(0, 0 4px rgba(0, 0, 0, 0.1));
+  }
+}
